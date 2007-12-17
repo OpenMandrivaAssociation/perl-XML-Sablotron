@@ -17,7 +17,6 @@ BuildRequires:	libsablotron-devel >= 0.95
 BuildRequires:	perl-devel 
 BuildRequires:	libjs-devel
 Requires:	perl 
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The %{module} perl module encapsulates the Sablotron XSLT processor.
