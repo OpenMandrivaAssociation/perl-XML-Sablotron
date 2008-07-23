@@ -1,7 +1,7 @@
 %define module	XML-Sablotron
 %define	name	perl-%{module}
 %define version 1.01
-%define release %mkrel 6
+%define release %mkrel 8
 
 Summary:	Sablotron XSLT processor encapsulation
 Name:		%{name}
