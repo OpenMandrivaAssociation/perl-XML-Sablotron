@@ -1,46 +1,41 @@
-%define module	XML-Sablotron
-%define	name	perl-%{module}
-%define version 1.01
-%define release %mkrel 1
+%define upstream_name    XML-Sablotron
+%define upstream_version 1.01
 
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 Summary:	Sablotron XSLT processor encapsulation
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 License:	MPL
 Group:		Development/Perl
-Source0:	%{module}-%{version}.tar.bz2
-URL:		http://search.cpan.org/dist/%{module}
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
 Requires:	libsablotron >= 0.95
 BuildRequires:	libexpat-devel
 BuildRequires:	libsablotron-devel >= 0.95
 BuildRequires:	perl-devel 
 BuildRequires:	libjs-devel
-Requires:	perl 
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
-The %{module} perl module encapsulates the Sablotron XSLT processor.
+This package is a interface to the Sablotron API.
 
 %prep
-
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
 %make OPTIMIZE="%{optflags}"
 
 %check
 %make test
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %{makeinstall_std}
 
 %clean 
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
