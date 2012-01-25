@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:	2
 Summary:	Sablotron XSLT processor encapsulation
 License:	MPL
 Group:		Development/Perl
