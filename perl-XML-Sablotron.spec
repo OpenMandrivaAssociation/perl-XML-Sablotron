@@ -10,11 +10,10 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
 Patch0:		XML-Sablotron-1.01-perl5.14-build-fixes.patch
-Requires:	libsablotron >= 0.95
-BuildRequires:	libexpat-devel
-BuildRequires:	libsablotron-devel >= 0.95
+BuildRequires:	expat-devel
+BuildRequires:	sablotron-devel >= 0.95	
 BuildRequires:	perl-devel 
-BuildRequires:	libjs-devel
+BuildRequires:	pkgconfig(mozjs185)
 
 %description
 This package is a interface to the Sablotron API.
