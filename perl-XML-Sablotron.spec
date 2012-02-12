@@ -1,21 +1,20 @@
-%define upstream_name    XML-Sablotron
+%define upstream_name XML-Sablotron
 %define upstream_version 1.01
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
 Release:	2
 Summary:	Sablotron XSLT processor encapsulation
 License:	MPL
 Group:		Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
 Patch0:		XML-Sablotron-1.01-perl5.14-build-fixes.patch
 Requires:	libsablotron >= 0.95
 BuildRequires:	libexpat-devel
 BuildRequires:	libsablotron-devel >= 0.95
 BuildRequires:	perl-devel 
 BuildRequires:	libjs-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This package is a interface to the Sablotron API.
@@ -32,15 +31,9 @@ This package is a interface to the Sablotron API.
 %make test
 
 %install
-rm -rf %{buildroot}
-
-%{makeinstall_std}
-
-%clean 
-rm -rf %{buildroot}
+%makeinstall_std
 
 %files
-%defattr(-,root,root)
 %doc Changes README
 %{perl_vendorarch}/XML
 %{perl_vendorarch}/auto/XML
