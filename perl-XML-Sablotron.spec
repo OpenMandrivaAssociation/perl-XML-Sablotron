@@ -7,7 +7,7 @@ Release:	4
 Summary:	Sablotron XSLT processor encapsulation
 License:	MPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
 Patch0:		XML-Sablotron-1.01-perl5.14-build-fixes.patch
 BuildRequires:	expat-devel
