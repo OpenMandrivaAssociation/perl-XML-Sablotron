@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
 Patch0:		XML-Sablotron-1.01-perl5.14-build-fixes.patch
+BuildRequires:	make
 BuildRequires:	expat-devel
 BuildRequires:	sablotron-devel >= 0.95	
 BuildRequires:	perl-devel 
