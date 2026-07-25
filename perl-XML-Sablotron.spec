@@ -2,13 +2,13 @@
 %define upstream_version 1.01
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 Summary:	Sablotron XSLT processor encapsulation
 License:	MPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/XML-Sablotron
+Source0:	https://cpan.metacpan.org/authors/id/P/PA/PAVELH/XML-Sablotron-%{upstream_version}.tar.gz
 Patch0:		XML-Sablotron-1.01-perl5.14-build-fixes.patch
 BuildRequires:	make
 BuildRequires:	expat-devel
